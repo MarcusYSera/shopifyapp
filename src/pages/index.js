@@ -12,7 +12,7 @@ const App = () => {
       </li> */}
         <li>
           <Link href="/Hello" as="/Hello">
-            <p>Hello Page</p>
+            <a href="/">Hello Page</a>
           </Link>
         </li>
       </ul>
