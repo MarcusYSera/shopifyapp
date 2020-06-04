@@ -1,23 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
+import { EmptyState, Layout, Page } from '@shopify/polaris';
+
+const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
 const App = () => {
   return (
-    <div>
-      <ul>
-        {/* <li>
-        <Link href="/" as="/App">
-          <p>Home Page</p>
-        </Link>
-      </li> */}
-        <li>
-          <Link href="/Hello" as="/Hello">
-            <a href="/">Hello Page</a>
-          </Link>
-        </li>
-      </ul>
-      <p>HEllo World</p>
-    </div>
+    <Page>
+      <Layout>
+        <EmptyState
+          heading="Discount your products temporarily"
+          action={{
+            content: 'Select products',
+            onAction: () => console.log('clicked'),
+          }}
+          image={img}
+        >
+          <p>Select products to change their price temporarily.</p>
+        </EmptyState>
+      </Layout>
+    </Page>
   );
 };
 
