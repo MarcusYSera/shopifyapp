@@ -27,10 +27,14 @@ app.prepare().then(() => {
       scopes: ['read_products'],
       afterAuth(ctx) {
         const { shop, accessToken } = ctx.session;
-
+        ctx.cookies.set('shopOrigin', shop, {
+          httpOnly: false,
+          secure: true,
+          sameSite: 'none',
+        });
         ctx.redirect('/');
       },
-    }),
+    })
   );
 
   server.use(verifyRequest());
@@ -38,7 +42,6 @@ app.prepare().then(() => {
     await handle(ctx.req, ctx.res);
     ctx.respond = false;
     ctx.res.statusCode = 200;
-    return;
   });
 
   server.listen(port, () => {
