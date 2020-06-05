@@ -7,6 +7,12 @@ import '@shopify/polaris/styles.css';
 import translations from '@shopify/polaris/locales/en.json';
 import Cookies from 'js-cookie';
 
+const db = require('dotenv');
+
+db.connect({
+  API_KEY: process.env.SHOPIFY_API_KEY,
+});
+
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
