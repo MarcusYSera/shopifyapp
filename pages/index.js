@@ -8,10 +8,12 @@ class Index extends React.Component {
   render() {
     return (
       <Page>
-        <TitleBar primaryAction={{
-          content: 'Select products',
-          onAction: () => this.setState({ open: true }),
-        }} />
+        <TitleBar
+          primaryAction={{
+            content: 'Select products',
+            onAction: () => this.setState({ open: true }),
+          }}
+        />
         <ResourcePicker
           resourceType="Product"
           showVariants={false}
@@ -38,7 +40,7 @@ class Index extends React.Component {
   handleSelection = (resources) => {
     const idsFromResources = resources.selection.map((product) => product.id);
     this.setState({ open: false });
-    console.log(resources);
+    console.log(idsFromResources);
   };
 }
 

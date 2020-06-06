@@ -482,7 +482,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
         open: false
       });
 
-      console.log(resources);
+      console.log(idsFromResources);
     });
 
     return _this;
