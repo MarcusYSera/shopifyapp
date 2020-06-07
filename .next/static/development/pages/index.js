@@ -69502,7 +69502,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
         open: false
       });
 
-      console.log(idsFromResources);
+      store_js__WEBPACK_IMPORTED_MODULE_11___default.a.set('ids', idsFromResources);
     });
 
     return _this;
