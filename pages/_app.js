@@ -29,9 +29,11 @@ class MyApp extends App {
           <meta charSet="utf-8" />
         </Head>
         <Provider config={config}>
-          <ApolloProvider client={client}>
-            <Component {...pageProps} />
-          </ApolloProvider>
+          <AppProvider>
+            <ApolloProvider client={client}>
+              <Component {...pageProps} />
+            </ApolloProvider>
+          </AppProvider>
         </Provider>
       </React.Fragment>
     );

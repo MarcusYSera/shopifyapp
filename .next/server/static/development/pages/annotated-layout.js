@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -543,7 +543,7 @@ var AnnotatedLayout = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*****************************************!*\
   !*** multi ./pages/annotated-layout.js ***!
   \*****************************************/

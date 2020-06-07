@@ -885,6 +885,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _shopify_polaris_styles_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @shopify/polaris/styles.css */ "./node_modules/@shopify/polaris/styles.css");
 /* harmony import */ var _shopify_polaris_styles_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_shopify_polaris_styles_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -903,6 +907,13 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !_b
 
 
 
+
+
+var client = new apollo_boost__WEBPACK_IMPORTED_MODULE_13___default.a({
+  fetchOptions: {
+    credentials: 'include'
+  }
+});
 
 var MyApp = /*#__PURE__*/function (_App) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(MyApp, _App);
@@ -923,14 +934,16 @@ var MyApp = /*#__PURE__*/function (_App) {
           pageProps = _this$props.pageProps;
       var config = {
         apiKey: "f5e7eb0fea93993aab4df42de07f922a",
-        shopOrigin: js_cookie__WEBPACK_IMPORTED_MODULE_11___default.a.get("shopOrigin"),
+        shopOrigin: js_cookie__WEBPACK_IMPORTED_MODULE_11___default.a.get('shopOrigin'),
         forceRedirect: true
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_8___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("title", null, "Sample App"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
         charSet: "utf-8"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_shopify_app_bridge_react__WEBPACK_IMPORTED_MODULE_10__["Provider"], {
         config: config
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_shopify_polaris__WEBPACK_IMPORTED_MODULE_9__["AppProvider"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Component, pageProps))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_shopify_polaris__WEBPACK_IMPORTED_MODULE_9__["AppProvider"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_14__["ApolloProvider"], {
+        client: client
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Component, pageProps)))));
     }
   }]);
 
@@ -972,6 +985,17 @@ module.exports = require("@shopify/app-bridge-react");
 /***/ (function(module, exports) {
 
 module.exports = require("@shopify/polaris");
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
 
 /***/ }),
 
@@ -1137,6 +1161,17 @@ module.exports = require("prop-types");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-apollo":
+/*!*******************************!*\
+  !*** external "react-apollo" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-apollo");
 
 /***/ })
 
